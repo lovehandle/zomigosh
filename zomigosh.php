@@ -93,7 +93,7 @@ class ZOMIGOSH extends WP_Widget {
 }
 
 function ZMGInit() {
-  wp_register_script('zmg-twitter', (ZMG_ABS_URL . 'js/jquery.tweet.js'), false, '', true);
+  wp_register_script('zmg-twitter', (ZMG_ABS_URL . 'js/jquery.tweet.js'), array('jquery'), '', true);
   wp_enqueue_script('zmg-twitter');
 
   return register_widget("ZOMIGOSH");
